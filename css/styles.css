@@ -51,14 +51,25 @@ h2 {
 
 .hero-header {
     position: relative;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
     background: url("../assets/background.png");
     object-fit: cover;
     color: rgb(243, 225, 240);
     font-size: 2.5em;
     height: 50vh;
+}
+
+.hero-header:nth-child(1) {
+    justify-items: end;
+}
+
+.hero-header img {
+    width: 8rem;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 100%;
 }
 
 .hero-header:after {
