@@ -184,3 +184,15 @@ h2 {
 .work-wrapper p {
     font-size: .8rem;
 }
+
+@media only screen and (max-width: 1200px) {
+    .hero-header {
+        font-size: 1.5rem;
+    }
+    .hero-text h2 {
+        display: none;
+    }
+    .work-container {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
