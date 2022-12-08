@@ -150,7 +150,7 @@ h2 {
 
 .work-wrapper {
     background-color: var(--clr-secondary);
-    border: 1px solid var(--clr-primary);
+    border: 1px solid var(--clr-accent);
     border-radius: var(--border-radius);
     color: white;
 }
