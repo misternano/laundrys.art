@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 :root {
     --clr-primary: rgb(23 20 24);
-    --clr-secondary: rgb(60, 6, 48);
+    --clr-secondary: rgb(60 6 48);
     --clr-accent: #fff;
     --border-radius: .35rem;
     --figure-gap: 1rem;
