@@ -141,7 +141,7 @@ h2 {
     background-color: var(--clr-secondary);
     border: 1px solid var(--clr-primary);
     border-radius: var(--border-radius);
-    color: white
+    color: white;
 }
 
 .work-wrapper figure {
@@ -174,10 +174,12 @@ h2 {
 }
 
 .work-wrapper h3::before {
+    margin-right: 1px;
     content: open-quote;
 }
 
 .work-wrapper h3::after {
+    margin-left: 1px;
     content: close-quote;
 }
 
