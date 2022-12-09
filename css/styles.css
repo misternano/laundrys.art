@@ -201,6 +201,14 @@ h2 {
 @media only screen and (max-width: 1200px) {
     .hero-header {
         font-size: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    .hero-text {
+        margin: 0;
     }
     .hero-text h2 {
         display: none;
