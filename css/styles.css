@@ -257,8 +257,9 @@ h2 {
     }
     .carousel {
         flex-direction: column;
+        left: unset;
         bottom: 50%;
-        left: 0.25rem;
+        right: 0.25rem;
         translate: 0 50%;
     }
 }
