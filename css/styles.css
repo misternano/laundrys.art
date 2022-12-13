@@ -255,4 +255,10 @@ h2 {
     .work-container {
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
+    .carousel {
+        flex-direction: column;
+        bottom: 50%;
+        left: 0.25rem;
+        translate: 0 50%;
+    }
 }
