@@ -1,18 +1,17 @@
 @import url(/css/reset.css);
 @import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
 :root {
-    --clr-primary: rgb(23 20 24);
-    --clr-secondary: rgb(60 6 48);
-    --clr-accent: #fff;
+    --clr-primary:23 20 24;
+    --clr-secondary: 60 6 48;
+    --clr-accent: #666;
     --border-radius: .35rem;
     --figure-gap: 1rem;
 }
 
 body {
     user-select: none;
-    background-color: var(--clr-primary);
+    background-color: rgb(var(--clr-primary));
     font-family: "Overpass", sans-serif;
-    overflow: overlay;
 }
 
 a {
@@ -54,11 +53,11 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-    background: url("../assets/background.png");
+    background: url("../assets/background.png") repeat;
     object-fit: cover;
-    color: rgb(243, 225, 240);
     font-size: 2.5em;
     height: 50vh;
+    gap: 3rem;
 }
 
 .hero-header:nth-child(1) {
@@ -83,11 +82,12 @@ h2 {
 }
 
 .hero-text {
+    width: 100%;
     margin: auto;
     padding: 1rem 2rem;
     background-color: rgb(26 11 23 / .75);
     backdrop-filter: blur(.25rem);
-    color: white;
+    color: rgb(243, 225, 240);
     font-weight: bold;
     border: 3px solid white;
     text-align: center;
@@ -118,7 +118,7 @@ h2 {
 }
 
 .socials svg:hover {
-    scale: 1.1;
+    scale: 1.05;
 }
 
 #discord:hover {
@@ -149,7 +149,7 @@ h2 {
 }
 
 .work-wrapper {
-    background-color: var(--clr-secondary);
+    background-color: rgb(var(--clr-secondary));
     border: 1px solid var(--clr-accent);
     border-radius: var(--border-radius);
     color: white;
@@ -162,40 +162,79 @@ h2 {
 }
 
 .work-wrapper figcaption {
-    padding: 1rem;
-    padding-top: 0;
+    padding: 0 0.5rem 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.work-wrapper img {
-    position: relative;
+.work-wrapper .work-img {
     height: auto;
+    max-height: 200px;
     width: auto;
     object-fit: cover;
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    object-position: center 25%;
+    background: radial-gradient(#3b333e,#171418);
+    border-radius: var(--border-radius);
 }
 
 .work-wrapper h3 {
-    font-size: .9rem;
+    font-size: 1rem;
     font-style: oblique;
-    quotes: "'" "'";
+    font-weight: 500;
 }
 
 .work-wrapper h3::before {
-    margin-right: 1px;
+    margin-right: 2px;
     content: open-quote;
 }
 
 .work-wrapper h3::after {
-    margin-left: 1px;
+    margin-left: 2px;
     content: close-quote;
 }
 
 .work-wrapper p {
     font-size: .8rem;
+}
+
+.img-wrapper {
+    position: relative;
+}
+
+.carousel {
+    position: absolute;
+    bottom: 0.25rem;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.carousel img {
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border: 3px solid rgb(var(--clr-primary) / 0.8);
+    border-radius: var(--border-radius);
+}
+
+.carousel .dot {
+    cursor: pointer;
+    filter: saturate(25%);
+    opacity: 0.8;
+    transition: filter 100ms ease-in, opacity 100ms ease-in;
+}
+
+.carousel .active, .dot:hover {
+    filter: saturate(100%);
+    opacity: 1;
+}
+
+.carouselSlide {
+    display: none;
 }
 
 @media only screen and (max-width: 1200px) {
